@@ -18,7 +18,7 @@
         <input class="buildInValidation" required pattern="^[0-9]{10}$" type="text" title="Nip" placeholder="1234567891" />
     </p>
     <p>
-        <input class="buildInValidation" required pattern="^[a-z]{3}[0-9]{3,6}$" type="text" title="Numer dowodu" placeholder="ABA300000" />
+        <input class="buildInValidation" required pattern="^[a-z]{3}[0-9]{6}$" type="text" title="Numer dowodu" placeholder="ABA300000" />
     </p>
     <p>
         <input class="buildInValidation" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" type="text" title="adres ipv4" placeholder="123.123.123.123" />
@@ -30,7 +30,7 @@
         <input class="buildInValidation" required pattern="[a-z](:\\)(windows|winnt|win|dos|msdos)((\\)[a-z]+)?"  type="text" title="Ścieżka 1" placeholder="C:\windows\temp" />
     </p>
     <p>
-        <input class="buildInValidation" required type="text" title="Ścieżka 2" placeholder="C:\WinDowS\temp" />
+        <input class="buildInValidation" pattern="[a-z](:\\)([wW][iI][nN][dD][oO][wW][sS]|[wW][iI][nN][nN][tT]|[wW][iI][nN]|[dD][oO][sS]|[mM][sS][dD][oO][sS])((\\)[a-z]+)?"required type="text" title="Ścieżka 2" placeholder="C:\WinDowS\temp" />
     </p>
     <p>
         <input class="buildInValidation" pattern="((\/)etc(\/))(.+/)*(.+)" required type="text" title="Ścieżka 3" placeholder="/etc/passwd" />
