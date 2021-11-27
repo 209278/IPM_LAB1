@@ -1,7 +1,7 @@
-.good{
+.buildInValidation:valid{
     border: 5px solid green;
 }
 
-.bad{
+.buildInValidation:invalid{
     border: 5px solid red;
 }
