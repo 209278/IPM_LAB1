@@ -27,10 +27,10 @@
         <input class="buildInValidation" required pattern="https?://.+" type="text" title="Strona WWW" placeholder="http://www.test.com" />
     </p>
     <p>
-        <input class="buildInValidation" required pattern="[a-z](:\\)(windows|winnt|win|dos|msdos)((\\)[a-z]+)?"  type="text" title="Ścieżka 1" placeholder="C:\windows\temp" />
+        <input class="buildInValidation" required pattern="[a-z]|[A-Z](:\\)(windows|winnt|win|dos|msdos)((\\)[a-z]+)?"  type="text" title="Ścieżka 1" placeholder="C:\windows\temp" />
     </p>
     <p>
-        <input class="buildInValidation" pattern="[a-z](:\\)([wW][iI][nN][dD][oO][wW][sS]|[wW][iI][nN][nN][tT]|[wW][iI][nN]|[dD][oO][sS]|[mM][sS][dD][oO][sS])((\\)[a-z]+)?"required type="text" title="Ścieżka 2" placeholder="C:\WinDowS\temp" />
+        <input class="buildInValidation" pattern="[a-z]|[A-Z](:\\)([wW][iI][nN][dD][oO][wW][sS]|[wW][iI][nN][nN][tT]|[wW][iI][nN]|[dD][oO][sS]|[mM][sS][dD][oO][sS])((\\)([a-z]|[A-Z])+)?"required type="text" title="Ścieżka 2" placeholder="C:\WinDowS\temp" />
     </p>
     <p>
         <input class="buildInValidation" pattern="((\/)etc(\/))(.+/)*(.+)" required type="text" title="Ścieżka 3" placeholder="/etc/passwd" />
