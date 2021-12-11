@@ -6,23 +6,31 @@ window.addEventListener('load', function () {
 
     var day = today.getDay();
     if(day === 0){
-        dd = dd + 1;
+        dd = dd - 6;
     }else if(day === 6){
-        dd = dd + 2;
+        dd = dd - 5;
     }
+
+    var number_for_min = dd;
+    var number_for_max = dd + 4;
     
-    if (dd < 10) {
-       dd = '0' + dd;
+    if (number_for_min < 10) {
+        number_for_min = '0' + number_for_min;
+    }
+
+    if (number_for_max < 10) {
+        number_for_max = '0' + number_for_max;
     }
     
     if (mm < 10) {
        mm = '0' + mm;
     } 
+
+    
         
-    today = yyyy + '-' + mm + '-' + dd;
+    today = yyyy + '-' + mm + '-' + number_for_min;
     document.getElementById("datefield").setAttribute("min", today);
-    dd = dd + 4;
-    today = yyyy + '-' + mm + '-' + dd;
+    today = yyyy + '-' + mm + '-' + number_for_max;
     document.getElementById("datefield").setAttribute("max", today);
 })
 
