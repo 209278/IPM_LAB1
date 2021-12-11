@@ -1,0 +1,7 @@
+.buildInValidation:valid{
+    border: 5px solid green;
+}
+
+.buildInValidation:invalid{
+    border: 5px solid red;
+}
