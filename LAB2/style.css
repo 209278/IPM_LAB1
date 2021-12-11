@@ -5,3 +5,11 @@
 .buildInValidation:invalid{
     border: 5px solid red;
 }
+
+.timerValidationCheck:invalid{
+    border: 0px;
+}
+
+.timerValidationCheck:invalid{
+    border: 5px solid red;
+}
