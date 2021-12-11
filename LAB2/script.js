@@ -21,5 +21,8 @@ window.addEventListener('load', function () {
         
     today = yyyy + '-' + mm + '-' + dd;
     document.getElementById("datefield").setAttribute("min", today);
+    dd = dd + 4;
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("datefield").setAttribute("max", today);
 })
 
