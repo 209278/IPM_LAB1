@@ -3,6 +3,7 @@ let id;
 let index;
 let indexDrop;
 let list;
+var newId = 5;
 
 function drop(ev){
     if(ev.target.className == "dropzone" && ev.target.id !== id) {
@@ -35,3 +36,24 @@ function drag(ev){
 function allowDrop(ev) {
     ev.preventDefault();
 }
+
+document.addEventListener("keyup", function(ev) {
+    if (ev.keyCode === 13) {
+        var li = document.createElement('li'); 
+        li.setAttribute("class", "dropzone");
+        li.setAttribute("ondrop", "drop(event)");
+        li.setAttribute("ondrag", "drag(event)");
+        li.setAttribute("id", newId);
+        li.setAttribute("draggable", "true");
+        
+        var input = document.createElement('input'); 
+        input.setAttribute('typr', "text");
+        input.setAttribute('value', "Item");
+
+        li.appendChild(input);
+
+        document.getElementsByClassName("wrapper")[0].appendChild(li);
+
+        newId++;
+    }
+});

@@ -9,13 +9,15 @@
 
 <body>
 
-    <ol ondragover="allowDrop(event)">
-        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='0' draggable="true">List item 1</li>
-        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='1' draggable="true">List item 2</li>
-        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='2' draggable="true">List item 3</li>
-        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='3' draggable="true">List item 4</li>
-        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='4' draggable="true">List item 5</li>
+    <ol class="wrapper" ondragover="allowDrop(event)">
+        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='0' draggable="true"><input type="text" value="Item 1"></li>
+        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='1' draggable="true"><input type="text" value="Item 2"></li>
+        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='2' draggable="true"><input type="text" value="Item 3"></li>
+        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='3' draggable="true"><input type="text" value="Item 4"></li>
+        <li class="dropzone" ondrop="drop(event)" ondrag="drag(event)" id='4' draggable="true"><input type="text" value="Item 5"></li>
     </ol>
-    
+    <p>
+        Click ENTER to add Item
+    </p>
 </body>
 </html>
