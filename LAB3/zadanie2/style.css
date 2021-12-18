@@ -6,12 +6,25 @@
 }
 .platform{
     background-color: aquamarine;
-    width: 106%;
+    width: 102%;
     min-height: 80%;
 }
 
 .footer{
     background-color: cadetblue;
-    width: 106%;
+    width: 102%;
     min-height: 20%;
+}
+
+.item{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.field{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border:1px solid #000000;
 }
