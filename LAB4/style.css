@@ -8,17 +8,13 @@ body{
     position: absolute;
 }
 
-.bgRed{
-    background-color: red;
-}
-
 #field1{
     height: 20%;
 }
 
 #field2{
     height: 80%;
-    background-color: skyblue;
+    background-color: rgb(180, 184, 185);
 }
 
   

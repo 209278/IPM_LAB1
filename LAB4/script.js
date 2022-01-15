@@ -61,7 +61,13 @@ function createBlock() {
     
     block.style.transform = transformCSSValue; 
     block.classList.add('block');
-    block.classList.add('bgRed');
+    
+    x = '#';
+    y = parseInt(Math.random()*255); if( y<16 ) x += '0'+y.toString(16); else x += y.toString(16);
+    y = parseInt(Math.random()*255); if( y<16 ) x += '0'+y.toString(16); else x += y.toString(16);
+    y = parseInt(Math.random()*255); if( y<16 ) x += '0'+y.toString(16); else x += y.toString(16);
+    block.style.backgroundColor = x;
+    
     block.addEventListener('mousedown', onDragStart, false);
 
     document.getElementById("field1").appendChild(block);
