@@ -1,0 +1,10 @@
+.block{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.bgRed{
+    background-color: red;
+}
+  
