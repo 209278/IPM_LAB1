@@ -1,15 +1,43 @@
+var draggedEl,
+      grabPointY,
+      grabPointX;
 
-  
-onDragStart = function (ev) {
+function onDragStart(ev) {
+    var boundingClientRect;
     
+    draggedEl = this;
+    
+    boundingClientRect = draggedEl.getBoundingClientRect();
+    
+    grabPointY = boundingClientRect.top - ev.clientY;
+    grabPointX = boundingClientRect.left - ev.clientX;
 };
   
-onDrag = function (ev) {
+function onDrag(ev) {
+    if (!draggedEl) {
+      return;
+    }
     
+    var posX = ev.clientX + grabPointX,
+        posY = ev.clientY + grabPointY;
+    
+    if (posX < 0) {
+      posX = 0;
+    }
+    
+    if (posY < 0) {
+      posY = 0;
+    }
+    
+    draggedEl.style.transform = "translateX(" + posX + "px) translateY(" + posY + "px)";
 };
   
-onDragEnd = function () { 
-    
+function onDragEnd(ev) { 
+    if(ev.target.className == "dropZone"){
+        draggedEl = null;
+        grabPointX = null;
+        grabPointY = null;
+    }
 };
 
 function createBlock() {
@@ -21,7 +49,9 @@ function createBlock() {
     block.classList.add('bgRed');
     block.addEventListener('mousedown', onDragStart, false);
 
-    document.getElementById("mainWindow").appendChild(block);
+    document.getElementById("field1").appendChild(block);
     
 };
 
+document.addEventListener('mousemove', onDrag, false);
+document.addEventListener('mouseup', onDragEnd, false);

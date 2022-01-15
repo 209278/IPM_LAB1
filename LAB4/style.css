@@ -1,3 +1,7 @@
+body{
+    height: 1000px;
+}
+
 .block{
     width: 100px;
     height: 100px;
@@ -7,4 +11,14 @@
 .bgRed{
     background-color: red;
 }
+
+#field1{
+    height: 20%;
+}
+
+#field2{
+    height: 80%;
+    background-color: skyblue;
+}
+
   
