@@ -28,7 +28,22 @@ function onDrag(ev) {
     if (posY < 0) {
       posY = 0;
     }
-    
+
+    var allBlocks = document.getElementsByClassName('block');
+    var allBlocksLength = allBlocks.length;
+
+    for(var i = 0; i < allBlocksLength; i++){
+        if(allBlocks[i] != draggedEl){
+            var style = window.getComputedStyle(allBlocks[i]);
+            var matrix = new WebKitCSSMatrix(style.transform);
+
+            if(posX + 100 > matrix.m41 && posX < matrix.m41 + 100
+                && posY + 100 > matrix.m42 && posY < matrix.m42 + 100){
+                return;
+            }
+        }
+    }
+
     draggedEl.style.transform = "translateX(" + posX + "px) translateY(" + posY + "px)";
 };
   
